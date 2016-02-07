@@ -1,0 +1,49 @@
+﻿
+<form action="/Produto/Adiciona" method="POST">
+    @Html.AntiForgeryToken()
+    <p>
+        <label for="nome">Nome</label>
+        <input class="form-control" id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" />
+        @Html.ValidationMessage("produto.Nome")
+    </p>
+    <p>
+        <label for="preco"> Preço</label>
+        <input  class="form-control" id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" />
+        @Html.ValidationMessage("produto.Preco")
+        @Html.ValidationMessage("produto.PrecoInvalido")
+    </p>
+    <p>
+        <label for="Quantidade">Quantidade</label>
+        <input class="form-control" id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" />
+    </p>
+    <p>
+        <label for="descricao">Descrição</label>
+        <input class="form-control" id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" />
+    </p>
+    <p>
+        <label for="categoria">Categoria</label>
+        <select class="form-control" id="categoria" name="produto.CategoriaId">
+            @foreach (var categoria in ViewBag.Categorias)
+            {
+                if (ViewBag.Produto.CategoriaID != null)
+                {
+                    <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaID)">@categoria.Nome</option>
+                }
+                else
+                {
+                    <option value="@categoria.Id">@categoria.Nome</option>
+                }
+
+            }
+        </select>
+
+        @*<label>
+            Categoria:
+            <input type="text" id="categoria"  name="produto.CategoriaID" />
+        </label>*@
+
+    </p>
+    <p>
+        <input class="btn-default" type="submit" value="Salvar" />
+    </p>
+</form>

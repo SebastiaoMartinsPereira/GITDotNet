@@ -1,0 +1,71 @@
+﻿@model IList<StartProject.Models.Produto>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Código</td>
+            <td>Nome</td>
+            <td>Quantidade</td>
+            <td> * </td>
+            <td>**</td>
+        </tr>
+    </thead>
+    <tbody>
+        <!--Usa a lista de produtos contida da ViewBag enviada pelo CONTROLLER-->
+        @*Troquei io uso da ViewBag para o uso da propriedade Model que recebe uma definiçãõ do tipo de bjeto que está associada*@
+        @*@foreach (var produto in ViewBag.Produtos)*@
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                @*<td>@Html.ActionLink(produto.Nome,"Visualiza",new { id=produto.Id})</td>*@
+                <td>@Html.RouteLink(produto.Nome, "VisualizaProduto", new { id = produto.Id })</td>
+                <td id="quantidade@(produto.Id)">@produto.Quantidade</td>
+                <td>
+                    <a href="#" onclick="decrementa(@produto.Id);"> -- </a>
+                </td>
+                <td>
+                    <a href="" onclick="del(@produto.Id);"> deletar </a>
+                </td>
+
+                <th>Categoria</th>
+                <td>
+                    @if (produto.Categoria != null)
+                    {
+                        @produto.Categoria.Nome
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script type="text/javascript" src="~/Scripts_/jquery-1.11.3.js"> </script>
+<script type="text/javascript">
+
+    function del(produtoId) {
+        var url = "@Url.Action("Remove","Produto")";
+        var params = { id: produtoId };
+        $.post(url, params);
+    }
+
+    function decrementa(produtoId) {
+        //    DEXANDO A URL FIXA SERIA NESCESSÁRIO ALTERAR NO CODIGO SEMPRE QUE O NOME DA URL MuDAR
+        //var url = "/Produto/DecrementaQtd"
+        console.log("entrei");
+        var url = "@Url.Action("DecrementaQtd","Produto")";
+        var params = { id: produtoId };
+        $.post(url, params, atualiza);
+    }
+
+    function atualiza(resposta) {
+        var elemento = $("#quantidade" + resposta.Id);
+        elemento.html(resposta.Quantidade);
+        //$("#produto" + resposta.Id).html();
+    }
+
+    function atualizaDel(resposta) {
+
+    }
+
+</script>

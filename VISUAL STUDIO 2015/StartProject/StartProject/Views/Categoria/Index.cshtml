@@ -1,0 +1,23 @@
+﻿
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Código</td>
+            <td>Nome</td>
+            <td>Quantidade</td>
+        </tr>
+    </thead>
+    <tbody>
+        <!--Usa a lista de produtos contida da ViewBag enviada pelo CONTROLLER-->
+        @foreach (var categoria in ViewBag.Categorias)
+            {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+                <td>@categoria.Descricao</td>
+            </tr>
+        }
+    </tbody>
+</table>
