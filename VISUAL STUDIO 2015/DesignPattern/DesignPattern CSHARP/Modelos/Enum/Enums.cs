@@ -13,5 +13,9 @@ namespace DesignPattern_CSHARP.Modelos.Enum
         {
             XML = 1 ,CSV,PORCENTO
         }
+
+        public enum TipoRelatorio { Simples,Complexo}
     }
+
+
 }

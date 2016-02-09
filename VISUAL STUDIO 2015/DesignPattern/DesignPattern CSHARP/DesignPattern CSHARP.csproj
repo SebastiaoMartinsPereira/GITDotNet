@@ -43,13 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelos\Aplicacao\Agencia.cs" />
+    <Compile Include="Modelos\Aplicacao\Filtro\AbertaEsteMes.cs" />
+    <Compile Include="Modelos\Aplicacao\Filtro\ComSaldoMaiorQueOLimite.cs" />
+    <Compile Include="Modelos\Aplicacao\Filtro\Filtro.cs" />
+    <Compile Include="Modelos\Aplicacao\Filtro\FiltroAbaixoDoLimiteMinimo.cs" />
     <Compile Include="Modelos\Aplicacao\IFormatRequisicao.cs" />
+    <Compile Include="Modelos\Aplicacao\Relatorio\Relatorio.cs" />
+    <Compile Include="Modelos\Aplicacao\Relatorio\TemplateRelatorio.cs" />
     <Compile Include="Modelos\Aplicacao\RequisicaoXml.cs" />
     <Compile Include="Modelos\CalculaDeDescontos.cs" />
     <Compile Include="Modelos\CalculadorDeImpostos.cs" />
     <Compile Include="Modelos\Aplicacao\Conta.cs" />
     <Compile Include="Modelos\Desconto\Desconto5Itens.cs" />
     <Compile Include="Modelos\Desconto\IDesconto.cs" />
+    <Compile Include="Modelos\ExemploDP\DPDecorator.cs" />
+    <Compile Include="Modelos\ExemploDP\DPTemplateMethod.cs" />
+    <Compile Include="Modelos\Imposto\Acpp.cs" />
+    <Compile Include="Modelos\Imposto\ICPP.cs" />
+    <Compile Include="Modelos\Imposto\Ihit.cs" />
+    <Compile Include="Modelos\Imposto\Ikcv.cs" />
+    <Compile Include="Modelos\Imposto\ClsImposto.cs" />
+    <Compile Include="Modelos\Imposto\Pis.cs" />
+    <Compile Include="Modelos\Imposto\TaxVeryHigh.cs" />
+    <Compile Include="Modelos\Imposto\TemplateImpostoCondicional.cs" />
     <Compile Include="Modelos\TrataRequisicao.cs" />
     <Compile Include="Modelos\Enum\Enums.cs" />
     <Compile Include="Modelos\ExemploDP\DPChainResposability.cs" />
@@ -62,7 +79,7 @@
     <Compile Include="Modelos\Investimento\Conservador.cs" />
     <Compile Include="Modelos\Investimento\IInvestimento.cs" />
     <Compile Include="Modelos\Investimento\Moderado.cs" />
-    <Compile Include="Modelos\Item.cs" />
+    <Compile Include="Modelos\Aplicacao\Item.cs" />
     <Compile Include="Modelos\Aplicacao\Orcamento.cs" />
     <Compile Include="Modelos\CalculadorDeInvestimentos.cs" />
     <Compile Include="Modelos\Aplicacao\Requisicao.cs" />

@@ -16,8 +16,10 @@ namespace DesignPattern_CSHARP
             //DPStrategy.StrategyCalcImpostos();
             //DPStrategy.StrategyCalcInvestimentos();
             //DPChainResposability.ChainDescontos();
-            DPChainResposability.ChainRequisicao();
-
+            //DPChainResposability.ChainRequisicao();
+            //DPTemplateMethod.TemplateMethodRelatorios();
+            //DPDecorator.DecoratorImpostos();
+            DPDecorator.DecoratorFiltroContas();
         }
     }
 }

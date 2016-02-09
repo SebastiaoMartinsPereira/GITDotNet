@@ -9,7 +9,6 @@ namespace DesignPattern_CSHARP.Modelos.Imposto
 
     public interface IImposto
     {
-       
         double Calcula(Orcamento orcamento);
     }
 }
