@@ -44,6 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos\Aplicacao\Agencia.cs" />
+    <Compile Include="Modelos\Aplicacao\EstadosOrcamento\Aprovado.cs" />
+    <Compile Include="Modelos\Aplicacao\EstadosOrcamento\EstadoOrcamento.cs" />
+    <Compile Include="Modelos\Aplicacao\EstadosOrcamento\Finalizado.cs" />
+    <Compile Include="Modelos\Aplicacao\EstadosOrcamento\Novo.cs" />
+    <Compile Include="Modelos\Aplicacao\EstadosOrcamento\Reprovado.cs" />
     <Compile Include="Modelos\Aplicacao\Filtro\AbertaEsteMes.cs" />
     <Compile Include="Modelos\Aplicacao\Filtro\ComSaldoMaiorQueOLimite.cs" />
     <Compile Include="Modelos\Aplicacao\Filtro\Filtro.cs" />
