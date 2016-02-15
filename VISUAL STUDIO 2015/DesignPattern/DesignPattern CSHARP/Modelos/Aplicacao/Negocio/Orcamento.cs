@@ -12,7 +12,7 @@ namespace DesignPattern_CSHARP.Modelos
     {
         public double Valor { get; private set; }
         public IList<Item> Itens { get; private set; }
-        public EstadoOrcamento EstadoAtual { get; private set; }
+        public IEstadoOrcamento EstadoAtual { get; private set; }
         public Orcamento(double valor)
         {
             this.Valor = valor;
@@ -37,7 +37,7 @@ namespace DesignPattern_CSHARP.Modelos
                 Valor += valor;
         }
 
-        public void AlterarEstado(EstadoOrcamento novoEstado)
+        public void AlterarEstado(IEstadoOrcamento novoEstado)
         {
             this.EstadoAtual = novoEstado;
         }
@@ -51,9 +51,15 @@ namespace DesignPattern_CSHARP.Modelos
         {
             this.EstadoAtual.Reprova(this);
         }
+
         public void Finaliza()
         {
             this.EstadoAtual.Finaliza(this);
+        }
+
+        public void AplicaDescontoExtra()
+        {
+            this.EstadoAtual.AplicaDescontaoExtra(this);
         }
 
     }

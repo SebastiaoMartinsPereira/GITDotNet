@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace DesignPattern_CSHARP.Modelos.Aplicacao.EstadosOrcamento
 {
-    public class Finalizado : EstadoOrcamento
+    public class Finalizado : IEstadoOrcamento
     {
+        public bool JaAplicado { get; set; }
+
         public void AplicaDescontaoExtra(Orcamento orcamento)
         {
             throw new Exception("Não é possível dar descontos em um orcamento Finalizado!");
@@ -22,6 +24,11 @@ namespace DesignPattern_CSHARP.Modelos.Aplicacao.EstadosOrcamento
         public void Finaliza(Orcamento orcamento)
         {
             Aprova(orcamento);
+        }
+
+        public bool JaAplicouDesconto()
+        {
+            return false;
         }
 
         public void Reprova(Orcamento orcamento)

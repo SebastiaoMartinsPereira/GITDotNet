@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPattern_CSHARP.Modelos.Aplicacao.EstadosOrcamento
 {
-    public class Reprovado : EstadoOrcamento
+    public class Reprovado : IEstadoOrcamento
     {
+        public bool JaAplicado { get; set; } 
+
         public void AplicaDescontaoExtra(Orcamento orcamento)
         {
             throw new Exception("Não é possível conceder desconto para um orçamento reprovado!");
@@ -21,6 +23,11 @@ namespace DesignPattern_CSHARP.Modelos.Aplicacao.EstadosOrcamento
         public void Finaliza(Orcamento orcamento)
         {
             orcamento.AlterarEstado(new Finalizado());
+        }
+
+        public bool JaAplicouDesconto()
+        {
+            return false;
         }
 
         public void Reprova(Orcamento orcamento)

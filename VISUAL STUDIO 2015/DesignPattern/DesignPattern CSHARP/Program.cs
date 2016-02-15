@@ -19,7 +19,11 @@ namespace DesignPattern_CSHARP
             //DPChainResposability.ChainRequisicao();
             //DPTemplateMethod.TemplateMethodRelatorios();
             //DPDecorator.DecoratorImpostos();
-            DPDecorator.DecoratorFiltroContas();
+            //DPDecorator.DecoratorFiltroContas();
+            //DPState.StateEstadosOrcamento();
+            //DPState.StateEstadoConta();
+            //DPBuilder.BuilderNotaFIscal();
+            DPObserver.ObserverNotaFiscal();
         }
     }
 }
