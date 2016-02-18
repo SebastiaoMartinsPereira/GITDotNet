@@ -23,7 +23,8 @@ namespace DesignPattern_CSHARP
             //DPState.StateEstadosOrcamento();
             //DPState.StateEstadoConta();
             //DPBuilder.BuilderNotaFIscal();
-            DPObserver.ObserverNotaFiscal();
+            //DPObserver.ObserverNotaFiscal();
+            DPFlyWeight.FlyweightPiano();
         }
     }
 }

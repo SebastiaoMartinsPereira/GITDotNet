@@ -44,6 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos\Aplicacao\AcoesNotaFIscal\IAcoesComNF.cs" />
+    <Compile Include="Modelos\Aplicacao\Conexao\ConnectionFactory.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\INota.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\NotasMusicais.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\Do.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\Fa.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\La.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\Mi.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\Re.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\Si.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Notas\Sol.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Piano.cs" />
+    <Compile Include="Modelos\Aplicacao\Musica\Tocador.cs" />
+    <Compile Include="Modelos\ExemploDP\DPFlyWeight.cs" />
     <Compile Include="Modelos\ExemploDP\DPObserver.cs" />
     <Compile Include="Modelos\Geradores\CriarNotaFIscal.cs" />
     <Compile Include="Modelos\Aplicacao\Negocio\Agencia.cs" />
