@@ -58,8 +58,8 @@ namespace Tests
             leilao.Propoe(new Lance(tiago, 2000));
             leilao.Propoe(new Lance(tiago, 3000));
 
-            Assert.AreEqual(2, leilao.Lances.Count);
-            Assert.AreEqual(2000, leilao.Lances[leilao.Lances.Count - 1].ValorLance);
+            Assert.AreEqual(1, leilao.Lances.Count);
+            Assert.AreEqual(3000, leilao.Lances[leilao.Lances.Count - 1].ValorLance);
 
         }
 

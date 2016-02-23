@@ -15,6 +15,8 @@ namespace DesignPattern_CSHARP.Modelos.Enum
         }
 
         public enum TipoRelatorio { Simples,Complexo}
+
+        public enum TipoContrato { NOVO,EMANDAMENTO,ACERTADO,CONCLUIDO}
     }
 
 

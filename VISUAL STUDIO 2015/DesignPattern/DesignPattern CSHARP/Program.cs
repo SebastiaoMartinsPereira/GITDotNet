@@ -24,7 +24,8 @@ namespace DesignPattern_CSHARP
             //DPState.StateEstadoConta();
             //DPBuilder.BuilderNotaFIscal();
             //DPObserver.ObserverNotaFiscal();
-            DPFlyWeight.FlyweightPiano();
+            //DPFlyWeight.FlyweightPiano();
+            DPMemento.MementoHistorico();
         }
     }
 }

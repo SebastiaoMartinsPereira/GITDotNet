@@ -29,7 +29,7 @@ namespace LojaEF
 
             contexto.Entry(us).State = System.Data.Entity.EntityState.Modified;
             contexto.SaveChanges();
-            contexto.Usuarios.Attach()
+            //contexto.Usuarios.Attach()
 
         }
     }

@@ -8,6 +8,7 @@ namespace DesignPattern_CSHARP.Modelos.Imposto
 {
     /// <summary>
     /// Classe criada para exemplificar o Design Pattern Decorator
+    /// define as funcionalidades nescessárias para que uma classe que filha também seja um imposto.
     /// </summary>
     public abstract class ClsImposto
     {
